@@ -70,7 +70,7 @@ RUN curl -Lo /tmp/starship.tar.gz "https://github.com/starship/starship/releases
 
 RUN wget https://copr.fedorainfracloud.org/coprs/ublue-os/bling/repo/fedora-$(rpm -E %fedora)/ublue-os-bling-fedora-$(rpm -E %fedora).repo -O /etc/yum.repos.d/_copr_ublue-os-bling.repo && \
     wget https://copr.fedorainfracloud.org/coprs/ublue-os/staging/repo/fedora-"${FEDORA_MAJOR_VERSION}"/ublue-os-staging-fedora-"${FEDORA_MAJOR_VERSION}".repo -O /etc/yum.repos.d/ublue-os-staging-fedora-"${FEDORA_MAJOR_VERSION}".repo && \
-    wget https://copr.fedorainfracloud.org/coprs/jstaf/onedriver/repo/fedora-"${FEDORA_MAJOR_VERSION}"/jstaf-onedriver-fedora-"${FEDORA_MAJOR_VERSION}".repo && \
+    wget https://copr.fedorainfracloud.org/coprs/jstaf/onedriver/repo/fedora-"${FEDORA_MAJOR_VERSION}"/jstaf-onedriver-fedora-"${FEDORA_MAJOR_VERSION}".repo -O /etc/yum.repos.d/jstaf-onedriver-fedora-"${FEDORA_MAJOR_VERSION}".repo && \
     /tmp/build.sh && \
     /tmp/image-info.sh && \
     pip install --prefix=/usr yafti && \
@@ -93,6 +93,7 @@ RUN wget https://copr.fedorainfracloud.org/coprs/ublue-os/bling/repo/fedora-$(rp
     rm -f /etc/yum.repos.d/charm.repo && \
     rm -f /etc/yum.repos.d/_copr_ublue-os-bling.repo && \
     rm -f /etc/yum.repos.d/ublue-os-staging-fedora-"${FEDORA_MAJOR_VERSION}".repo && \
+    /etc/yum.repos.d/jstaf-onedriver-fedora-"${FEDORA_MAJOR_VERSION}".repo && \
     echo "Hidden=true" >> /usr/share/applications/fish.desktop && \
     echo "Hidden=true" >> /usr/share/applications/htop.desktop && \
     echo "Hidden=true" >> /usr/share/applications/nvtop.desktop && \
