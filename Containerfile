@@ -105,7 +105,7 @@ RUN wget https://copr.fedorainfracloud.org/coprs/ublue-os/bling/repo/fedora-$(rp
     chmod -R 1777 /var/tmp
 
 ## bluefin-dx developer edition image section
-FROM bluefin AS wipos-dx
+FROM wipos AS wipos-dx
 
 ARG IMAGE_NAME="${IMAGE_NAME}"
 ARG IMAGE_VENDOR="${IMAGE_VENDOR}"
