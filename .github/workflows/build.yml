@@ -28,7 +28,7 @@ jobs:
       fail-fast: false
       matrix:
         image_flavor: [main, nvidia, asus, asus-nvidia, framework, surface, surface-nvidia]
-        base_name: [bluefin, bluefin-dx]
+        base_name: [wipos, wipos-dx]
         major_version: [38, 39]
         include:
           - major_version: 38
@@ -49,7 +49,7 @@ jobs:
           containers: silverblue-${{ matrix.image_flavor }}:${{ matrix.major_version }}
 
       - name: Verify Chainguard images
-        if: matrix.base_name != 'bluefin'
+        if: matrix.base_name != 'wipos'
         uses: EyeCantCU/cosign-action/verify@v0.2.2
         with:
           containers: dive, flux, helm, ko, minio, kubectl
