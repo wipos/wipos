@@ -49,7 +49,7 @@
 			],
 			"bluefin-dx": [
 				"adobe-source-code-pro-fonts",
-				"cascadiacode-nerd-fonts",
+				"cascadia-code-fonts",
 				"code",
 				"containerd.io",
 				"dbus-x11",
