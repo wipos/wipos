@@ -26,6 +26,7 @@
 				"mesa-libGLU",
 				"nautilus-gsconnect",
 				"onedriver",
+				"nerd-fonts",
 				"playerctl",
 				"proton-vpn-gnome-desktop",
 				"pulseaudio-utils",
@@ -39,7 +40,6 @@
 				"stress-ng",
 				"tailscale",
 				"tmux",
-				"ublue-update",
 				"usbmuxd",
 				"wireguard-tools",
 				"xprop",
@@ -91,8 +91,7 @@
 				"qemu-user-binfmt",
 				"qemu-user-static",
 				"qemu",
-				"ubuntu-nerd-fonts",
-				"ubuntumono-nerd-fonts",
+				"ubuntu-family-fonts",
 				"virt-manager",
 				"virt-viewer"
 			]
@@ -129,7 +128,12 @@
 			"bluefin": [
 				"gnome-shell-extension-tailscale-gnome-qs",
 				"input-leap",
-                                "nautilus-open-any-terminal"
+				"nautilus-open-any-terminal",
+				"tuned",
+				"tuned-ppd",
+				"tuned-utils",
+				"tuned-utils-systemtap",
+				"tuned-profiles-atomic"
 			],
 			"bluefin-dx": [],
 			"bluefin-framework": []
