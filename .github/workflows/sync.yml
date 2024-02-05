@@ -20,6 +20,11 @@ jobs:
     fetch:
         runs-on: ubuntu-latest
         steps:
+            - name: Checkout
+              uses: checkout@v4
+              with:
+                fetch-depth: 0
+                ref: bluefin
             - name: Fetch
               run: |
                 git remote add bluefin https://github.com/ublue-os/bluefin.git
