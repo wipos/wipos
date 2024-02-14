@@ -25,7 +25,7 @@ cockpit:
     sudo systemctl enable cockpit.service
     echo 'Open Cockpit -> http://localhost:9090'
 
-# Toggle between Bluefin and the Developer Experience
+# Toggle between WIPOS and the Developer Experience
 devmode:
     #!/usr/bin/env bash
     CURRENT_IMAGE=$(rpm-ostree status -b --json | jq -r '.deployments[0]."container-image-reference"')
@@ -39,7 +39,7 @@ devmode:
         exit
     fi
 
-    if grep -q "bluefin-dx" <<< $CURRENT_IMAGE
+    if grep -q "wipos-dx" <<< $CURRENT_IMAGE
     then
         CURRENT_STATE="enabled"
     else
@@ -56,7 +56,7 @@ devmode:
             echo "You are already on a developer image"
         else
             echo "Rebasing to a developer image"
-            NEW_IMAGE=$(echo $CURRENT_IMAGE | sed "s/bluefin/bluefin-dx/")
+            NEW_IMAGE=$(echo $CURRENT_IMAGE | sed "s/wipos/wipos-dx/")
             rpm-ostree rebase $NEW_IMAGE
         fi
     elif [ "$OPTION" = "Disable" ]
@@ -64,7 +64,7 @@ devmode:
         if [ "$CURRENT_STATE" = "enabled" ]
         then
             echo "Rebasing to a non developer image"
-            NEW_IMAGE=$(echo $CURRENT_IMAGE | sed "s/bluefin-dx/bluefin/")
+            NEW_IMAGE=$(echo $CURRENT_IMAGE | sed "s/wipos-dx/wipos/")
             rpm-ostree rebase $NEW_IMAGE
         else
             echo "You are currently not on a developer image"
@@ -153,7 +153,7 @@ incus:
     #!/usr/bin/env bash
     CURRENT_IMAGE=$(rpm-ostree status -b --json | jq -r '.deployments[0]."container-image-reference"')
 
-    if grep -q "bluefin-dx" <<< $CURRENT_IMAGE
+    if grep -q "wipos-dx" <<< $CURRENT_IMAGE
     then
         echo 'Installing and configuring Incus.'
         /usr/bin/bluefin-incus
