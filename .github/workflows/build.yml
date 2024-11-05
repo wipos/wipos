@@ -1,4 +1,4 @@
-name: bluebuild
+name: wipos
 on:
   schedule:
     - cron: "00 06 * * *" # build at 06:00 UTC every day 
@@ -11,7 +11,7 @@ on:
   workflow_dispatch: # allow manually triggering builds
 jobs:
   bluebuild:
-    name: Build Custom Image
+    name: Build wipos Nvidia
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -25,7 +25,7 @@ jobs:
           - recipe.yml
     steps:
        # the build is fully handled by the reusable github action
-      - name: Build Custom Image
+      - name: Build wipos Nvidia Image
         uses: blue-build/github-action@v1.6
         with:
           recipe: ${{ matrix.recipe }}
