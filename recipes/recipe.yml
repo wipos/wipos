@@ -11,7 +11,7 @@ modules:
     files:
       - source: system
         destination: /
-  
+
   - type: rpm-ostree
     repos:
       - https://copr.fedorainfracloud.org/coprs/jstaf/onedriver/repo/fedora-%OS_VERSION%/jstaf-onedriver-fedora-%OS_VERSION%.repo
@@ -19,13 +19,11 @@ modules:
       - onedriver
       - proton-vpn-gnome-desktop
       - nextdns
-    remove:
-  
+
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
     system:
       install:
-      remove:
-      
-  - type: signing # this sets up the proper policy & signing files for signed images to work fully
+        - io.github.zen_browser.zen
 
+  - type: signing # this sets up the proper policy & signing files for signed images to work fully
