@@ -15,10 +15,12 @@ modules:
   - type: rpm-ostree
     repos:
       - https://copr.fedorainfracloud.org/coprs/jstaf/onedriver/repo/fedora-%OS_VERSION%/jstaf-onedriver-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/manciukic/libfprint-tod-goodix/repo/fedora-%OS_VERSION%/manciukic-libfprint-tod-goodix-fedora-%OS_VERSION%.repo
     install:
       - onedriver
       - proton-vpn-gnome-desktop
       - nextdns
+      - libfprint-tod-goodix
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
