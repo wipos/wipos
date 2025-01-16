@@ -1,3 +1,8 @@
 # wipos
 
-Bluefin + extra tools
+Bluefin +
+
+- ProtonVPN
+- NextDNS
+- Onedriver
+- Fingerprint drivers for Dell XPS
