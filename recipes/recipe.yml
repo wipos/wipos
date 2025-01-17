@@ -4,7 +4,7 @@ name: nvidia
 description: wipos Nvidia
 
 base-image: ghcr.io/ublue-os/bluefin-dx-nvidia
-image-version: latest
+image-version: stable
 
 modules:
   - type: files
