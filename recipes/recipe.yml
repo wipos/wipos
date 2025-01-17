@@ -17,15 +17,16 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/jstaf/onedriver/repo/fedora-%OS_VERSION%/jstaf-onedriver-fedora-%OS_VERSION%.repo
       - https://copr.fedorainfracloud.org/coprs/manciukic/libfprint-tod-goodix/repo/fedora-%OS_VERSION%/manciukic-libfprint-tod-goodix-fedora-%OS_VERSION%.repo
     install:
+      - libfprint-tod-goodix
+      - libsmbios
+      - nextdns
       - onedriver
       - proton-vpn-gnome-desktop
-      - nextdns
-      - libfprint-tod-goodix
     remove:
       - libfprint
 
   - type: default-flatpaks
-    notify: true # Send notification after install/uninstall is finished (true/false)
+    notify: false # Send notification after install/uninstall is finished (true/false)
     system:
       install:
         - io.github.zen_browser.zen
