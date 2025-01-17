@@ -29,6 +29,7 @@ modules:
     system:
       install:
         - io.github.zen_browser.zen
+        
   - type: script
   scripts:
     - bw.sh
