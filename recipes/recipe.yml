@@ -21,7 +21,6 @@ modules:
       - nextdns
       - onedriver
       - proton-vpn-gnome-desktop
-      - smbios-utils
     remove:
       - libfprint
 
