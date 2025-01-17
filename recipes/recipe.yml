@@ -18,10 +18,10 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/manciukic/libfprint-tod-goodix/repo/fedora-%OS_VERSION%/manciukic-libfprint-tod-goodix-fedora-%OS_VERSION%.repo
     install:
       - libfprint-tod-goodix
-      - libsmbios
       - nextdns
       - onedriver
       - proton-vpn-gnome-desktop
+      - smbios-utils
     remove:
       - libfprint
 
