@@ -31,7 +31,7 @@ modules:
         - io.github.zen_browser.zen
         
   - type: script
-  scripts:
-    - bw.sh
+    scripts:
+      - bw.sh
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
