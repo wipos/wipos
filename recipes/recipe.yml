@@ -17,6 +17,7 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/jstaf/onedriver/repo/fedora-%OS_VERSION%/jstaf-onedriver-fedora-%OS_VERSION%.repo
       - https://copr.fedorainfracloud.org/coprs/manciukic/libfprint-tod-goodix/repo/fedora-%OS_VERSION%/manciukic-libfprint-tod-goodix-fedora-%OS_VERSION%.repo
     install:
+      - https://github.com/bitwarden/clients/releases/download/desktop-v2025.1.1/Bitwarden-2025.1.1-x86_64.rpm
       - libfprint-tod-goodix
       - nextdns
       - onedriver
@@ -29,9 +30,5 @@ modules:
     system:
       install:
         - io.github.zen_browser.zen
-        
-  - type: script
-    scripts:
-      - bw.sh
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
