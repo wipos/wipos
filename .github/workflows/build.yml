@@ -1,7 +1,7 @@
 name: wipos
 on:
   schedule:
-    - cron: "0 7 * * 0" # Build weekly
+    - cron: "00 06 * * *" # build at 06:00 UTC every day 
   push:
     paths-ignore: # don't rebuild if only documentation has changed
       - "**.md"
