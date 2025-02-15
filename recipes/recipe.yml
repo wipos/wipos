@@ -28,6 +28,6 @@ modules:
     notify: false # Send notification after install/uninstall is finished (true/false)
     system:
       install:
-        - io.github.zen_browser.zen
+        - app.zen_browser.zen
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
