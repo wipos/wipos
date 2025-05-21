@@ -17,6 +17,7 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/jstaf/onedriver/repo/fedora-%OS_VERSION%/jstaf-onedriver-fedora-%OS_VERSION%.repo
       - https://copr.fedorainfracloud.org/coprs/manciukic/libfprint-tod-goodix/repo/fedora-%OS_VERSION%/manciukic-libfprint-tod-goodix-fedora-%OS_VERSION%.repo
     install:
+      - @development-tools
       - libfprint-tod-goodix
       - nextdns
       - onedriver
