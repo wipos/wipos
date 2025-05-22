@@ -1,8 +1,2 @@
-# wipos
-
-Bluefin +
-
-- ProtonVPN
-- NextDNS
-- Onedriver
-- Fingerprint drivers for Dell XPS
+# WIPOS
+_work in progress operating system_

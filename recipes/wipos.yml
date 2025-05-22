@@ -24,7 +24,7 @@ modules:
   - type: dnf
     group-install:
       packages:
-        - "Development Tools"
+        - development-tools
 
   - type: default-flatpaks
     notify: false # Send notification after install/uninstall is finished (true/false)
