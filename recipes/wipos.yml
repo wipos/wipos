@@ -27,11 +27,12 @@ modules:
         - development-tools
 
   - type: default-flatpaks
-    notify: false # Send notification after install/uninstall is finished (true/false)
-    system:
-      install:
-        - app.zen_browser.zen
-        - com.protonvpn.www
-        - io.gitlab.librewolf-community
+    configurations:
+      - notify: false
+        scope: system
+        install:
+         - app.zen_browser.zen
+         - com.protonvpn.www
+         - io.gitlab.librewolf-community
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
