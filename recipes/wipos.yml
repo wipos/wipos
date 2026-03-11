@@ -34,5 +34,6 @@ modules:
          - app.zen_browser.zen
          - com.protonvpn.www
          - io.gitlab.librewolf-community
+         - be.alexandervanhee.gradia
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
